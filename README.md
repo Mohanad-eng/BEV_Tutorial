@@ -47,6 +47,7 @@ Only the viewpoint changed.
 
 ![](https://multicorewareinc.com/wp-content/uploads/2023/06/BEV-gif.gif)
 
+------------------------------------------------------------------------------------------------------------------------------------
 
 ##  Steps in Implementing Bird's Eye View : 
 
@@ -83,6 +84,7 @@ Only the viewpoint changed.
 
 4- Post-Processing and Refinement
 
+--------------------------------------------------------------------------------------------------------------------------------
 
 
 In Lidar we convert , In camera , In Radar 
