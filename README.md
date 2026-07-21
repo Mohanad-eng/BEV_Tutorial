@@ -81,6 +81,8 @@ Only the viewpoint changed.
 
 2- Detecting Key Points for Homography
 
+![after making ipm](https://www.mdpi.com/ai/ai-06-00082/article_deploy/html/images/ai-06-00082-g002.png)
+
 3- Warping the Image Using Homography
 
 4- Post-Processing and Refinement
