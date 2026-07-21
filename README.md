@@ -53,8 +53,9 @@ Only the viewpoint changed.
 
 1- Calibration and Setup :
 
+   - Begin by calibrating the camera to obtain its intrinsic and extrinsic parameters. Typically, this is achieved using a chessboard calibration technique.
 
-    - Begin by calibrating the camera to obtain its intrinsic and extrinsic parameters. Typically, this is achieved using a chessboard calibration technique. The known geometry of the chessboard provides a reliable reference, allowing the system to compute the necessary camera parameters accurately.
+   - The known geometry of the chessboard provides a reliable reference, allowing the system to compute the necessary camera parameters accurately.
 
    - **Intrinsic parameters** : describe the internal characteristics of a camera, defining the relationship between the camera's image plane and pixel coordinates. These parameters include: 
     
