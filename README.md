@@ -51,12 +51,12 @@ Only the viewpoint changed.
 
 ##  Steps in Implementing Bird's Eye View : 
 
-1- Calibration and Setup
+1- Calibration and Setup :
 
 
     Begin by calibrating the camera to obtain its intrinsic and extrinsic parameters. Typically, this is achieved using a chessboard calibration technique. The known geometry of the chessboard provides a reliable reference, allowing the system to compute the necessary camera parameters accurately.
 
-    **Intrinsic parameters** : describe the internal characteristics of a camera, defining the relationship between the camera's image plane and pixel coordinates. These parameters include: 
+   - **Intrinsic parameters** : describe the internal characteristics of a camera, defining the relationship between the camera's image plane and pixel coordinates. These parameters include: 
     
      - Focal Length: Defines how much the camera zooms in or out, controlling the scale of objects in the image. The focal length is typically represented in terms of the x and y axes: fx and fy.
      
