@@ -87,6 +87,14 @@ Only the viewpoint changed.
 
 4- Post-Processing and Refinement
 
+
+In plain English, what the script does, no code:
+
+You look at your photo and pick 4 points that you know form a rectangle on the real ground — usually two points close to the car on the left/right edges of a lane, and two points further away on those same edges.
+You tell the computer "these 4 points, even though they look like a trapezoid in the photo, are actually corners of a rectangle."
+The computer works out the one mathematical warp that would turn your clicked trapezoid into a perfect rectangle.
+It applies that exact same warp to every pixel in the photo — not just your 4 points — which is what turns the whole road into a top-down view.
+
 --------------------------------------------------------------------------------------------------------------------------------
 
 
