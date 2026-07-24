@@ -323,7 +323,7 @@ Use the **camera calibration method** if you are:
 
 2- Detecting Key Points for Homography
 
-![after making ipm](https://www.mdpi.com/ai/ai-06-00082/article_deploy/html/images/ai-06-00082-g002.png)
+![](https://www.mdpi.com/ai/ai-06-00082/article_deploy/html/images/ai-06-00082-g002.png)
 
 3- Warping the Image Using Homography
 
