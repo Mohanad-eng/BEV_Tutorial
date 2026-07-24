@@ -237,32 +237,6 @@ In addition, if the road itself is uphill or downhill, strange shapes occur beca
 
 ## 4- Homography Computation
 
-The calibration pipeline is:
-
-```text
-Camera Intrinsics (K)
-
-        +
-
-Camera Rotation (R)
-
-        +
-
-Camera Translation (t)
-
-        │
-
-        ▼
-
-Ground Homography (H)
-
-        │
-
-        ▼
-
-Bird's Eye View
-```
-
 The homography is computed mathematically without selecting any image points.
 
 ### Advantages
@@ -289,139 +263,6 @@ When using the four-point method, the selected points should:
 * Form a rectangle in the real world.
 * Be visible in the camera image.
 * Be selected in a consistent order.
-
-Correct order:
-
-```text
-Camera View
-
-4 -------- 3
- \        /
-  \      /
-   \    /
-    \  /
-1 -------- 2
-```
-
-Where:
-
-1. Near-left
-2. Near-right
-3. Far-right
-4. Far-left
-
-Incorrect ordering produces a distorted or mirrored Bird's Eye View.
-
----
-
-# Homography Matrix
-
-Both approaches ultimately compute the same object:
-
-```text
-H (3 × 3)
-```
-
-The difference is how the matrix is obtained.
-
-Four-point method:
-
-```text
-4 Source Points
-       +
-4 Destination Points
-        │
-        ▼
-getPerspectiveTransform()
-        │
-        ▼
-H
-```
-
-Calibration method:
-
-```text
-Intrinsic Matrix
-
-        +
-
-Extrinsic Matrix
-
-        │
-        ▼
-Mathematics
-        │
-        ▼
-H
-```
-
-Both homography matrices are then used by OpenCV.
-
-```python
-warped = cv2.warpPerspective(
-    image,
-    H,
-    output_size
-)
-```
-
----
-
-# IPM in ROS2
-
-In a robotics pipeline, the workflow is typically:
-
-```text
-Camera
-
-        │
-
-        ▼
-
-Image Segmentation
-
-        │
-
-        ▼
-
-Binary Mask
-
-        │
-
-        ▼
-
-Inverse Perspective Mapping
-
-        │
-
-        ▼
-
-Bird's Eye View
-
-        │
-
-        ▼
-
-Lane Detection
-
-        │
-
-        ▼
-
-Centerline Extraction
-
-        │
-
-        ▼
-
-Path Planning
-
-        │
-
-        ▼
-
-Robot Controller
-```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -485,6 +326,10 @@ Use the **camera calibration method** if you are:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Project 1 : 
+
+Using **Rover Nexus** in the simulation **Webots** : 
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
