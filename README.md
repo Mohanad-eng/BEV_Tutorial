@@ -94,7 +94,21 @@ As We see here the lanes in the road intersect at the end, but when we preform t
 4- Post-Processing and Refinement
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# IPM (Inverse Prespective mapping) : 
 
+IPM is used to convert Pixels to Meters to be used by the Rover or the robot, 
+
+**Why** we dont use the pixels only ?
+
+Great question. You have received the lane coordinates in the image space. Pixels tend to get distorted by perceptive and they don’t have any metric meaning. IPM helps us transform those coordinates into a metric ground-plane coordinate system using linear operations.
+
+Imagine that the lane width is 3.5 metres. In the image, at a mid point near the Rover the lanes are 400 pixels apart. A little bit further, it drops down to 300. Further away, 50 pixels. THAT is the problem that we face. As an object is going further and further away in an image, it gets smaller and smaller.
+
+But with our new coordinates, we can establishing a metric scale based on camera calibration and plane geometry such as 1 unit in the image = 1 metre on the ground. Now that you have understood the overall use case for IPM.
+
+![](https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/cc07f7bfb67d2f297dcc80c3cab8f038a476557e/5-Figure5-1.png)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Two Ways to Perform IPM(Inverse Precpective mapping) : 
 
 There are two common approaches.
