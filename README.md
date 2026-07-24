@@ -221,8 +221,6 @@ Where:
 
 These values come from camera calibration or camera specifications.
 
----
-
 ## 2- Camera Extrinsics
 
 Extrinsic parameters describe where the camera is mounted.
@@ -247,7 +245,6 @@ Height = 0.15 m
 Yaw = 0°
 ```
 
----
 
 ## 3- Ground Plane Assumption
 
@@ -265,7 +262,6 @@ In addition, if the road itself is uphill or downhill, strange shapes occur beca
 
 ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAWIf0AE_yfOphLKdXW-fHoZJUjelPAYfrPFf0MQG1eX8UTXuQcc45tJOk&s=10)
 
----
 
 ## 4- Homography Computation
 
@@ -297,8 +293,6 @@ Bird's Eye View
 
 The homography is computed mathematically without selecting any image points.
 
----
-
 ### Advantages
 
 * Fully automatic
@@ -313,7 +307,7 @@ The homography is computed mathematically without selecting any image points.
 * Requires camera pose
 * More mathematical
 
----
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # How Are the Four Points Chosen?
 
@@ -476,19 +470,15 @@ Use the **camera calibration method** if you are:
 * Building a real-time BEV system.
 * Performing lane detection or path planning.
 
----
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Conclusion
+# Project 1 : 
 
-Inverse Perspective Mapping transforms a perspective camera image into a top-down Bird's Eye View by applying a homography matrix. This homography can be obtained either by manually defining four corresponding points or by computing it from the camera's intrinsic and extrinsic parameters. While the four-point approach is excellent for understanding the concept and experimenting with individual images, the calibration-based approach is the standard solution for robotics because it is automatic, accurate, and scalable to real-time autonomous navigation.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Real Hardware Implementation : 
 
-You look at your photo and pick 4 points that you know form a rectangle on the real ground — usually two points close to the car on the left/right edges of a lane, and two points further away on those same edges.
-You tell the computer "these 4 points, even though they look like a trapezoid in the photo, are actually corners of a rectangle."
-The computer works out the one mathematical warp that would turn your clicked trapezoid into a perfect rectangle.
-It applies that exact same warp to every pixel in the photo — not just your 4 points — which is what turns the whole road into a top-down view.
-
---------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 In Lidar we convert , In camera , In Radar 
