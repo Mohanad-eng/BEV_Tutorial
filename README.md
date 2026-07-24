@@ -295,21 +295,21 @@ Use the **camera calibration method** if you are:
 
    - **Intrinsic parameters** : describe the internal characteristics of a camera, defining the relationship between the camera's image plane and pixel coordinates. These parameters include: 
     
-     - Focal Length: Defines how much the camera zooms in or out, controlling the scale of objects in the image. The focal length is typically represented in terms of the x and y axes: fx and fy.
+     - *Focal Length*: Defines how much the camera zooms in or out, controlling the scale of objects in the image. The focal length is typically represented in terms of the x and y axes: fx and fy.
      
-      - Principal Point: The pixel coordinates of the optical center of the camera, where the optical axis intersects the image plane. It is represented as (Cx, Cy).
+      - *Principal Point*: The pixel coordinates of the optical center of the camera, where the optical axis intersects the image plane. It is represented as (Cx, Cy).
       
-      - Skew Coefficient: The angle between the x and y axes, usually close to 90°. In most consumer cameras, this value is negligible, but for certain specialized lenses, this could affect the image.
+      - *Skew Coefficient*: The angle between the x and y axes, usually close to 90°. In most consumer cameras, this value is negligible, but for certain specialized lenses, this could affect the image.
 
          ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBdbA7vTJwJMMMcUg6VD8iVCUE7dnjtGAZbn-KUbXCSqsWSW7_yE9t8w&s=10)
       
       - Distortion Coefficients: Most camera lenses cause some level of distortion, especially wide-angle lenses. This distortion can be of two types:
       
-      - Radial Distortion: Causes straight lines to appear curved (barrel or pincushion distortion).
+      - *Radial Distortion*: Causes straight lines to appear curved (barrel or pincushion distortion).
        
           ![](https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/2025/12/Radial-distortion-types.png)
         
-       - Tangential Distortion: Occurs when the lens and the image plane are not perfectly aligned.
+       - *Tangential Distortion*: Occurs when the lens and the image plane are not perfectly aligned.
 
           ![](https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/2025/12/tan_distortion.png)
         
@@ -317,9 +317,9 @@ Use the **camera calibration method** if you are:
 
       **Extrinsic parameters** : describe the camera's position and orientation relative to the world. They consist of:
       
-        - Rotation Matrix (R): Describes the **camera's orientation** in the world.
+        - **Rotation Matrix (R)**: Describes the **camera's orientation** in the world.
         
-        - Translation Vector (T): Describes the **camera's position** in the world. The translation vector has three components representing the camera's displacement along the x, y, and z axes.
+        - **Translation Vector (T)**: Describes the **camera's position** in the world. The translation vector has three components representing the camera's displacement along the x, y, and z axes.
 
 2- Detecting Key Points for Homography
 
