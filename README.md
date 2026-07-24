@@ -303,7 +303,7 @@ Use the **camera calibration method** if you are:
 
          ![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBdbA7vTJwJMMMcUg6VD8iVCUE7dnjtGAZbn-KUbXCSqsWSW7_yE9t8w&s=10)
       
-      - Distortion Coefficients: Most camera lenses cause some level of distortion, especially wide-angle lenses. This distortion can be of two types:
+      - **Distortion Coefficients**: Most camera lenses cause some level of distortion, especially wide-angle lenses. This distortion can be of two types:
       
       - **Radial Distortion**: Causes straight lines to appear curved (barrel or pincushion distortion).
        
