@@ -32,8 +32,11 @@ Imagine Rover Sees A box using the front camera, it dont know where it is it onl
 so , 
 
 1- Nearby objects look bigger.
+
 2- Distant objects look smaller.
+
 3- You only see what is in front of you.
+
 4- Everything is represented as pixels.
 
 So we use bev to see it from above as we see a map ,
@@ -188,7 +191,7 @@ OpenCV uses the homography matrix to transform every pixel into the new top-down
 * Camera movement usually requires recalculating the points
 * Not ideal for autonomous robots
 
----
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Method 2 — Camera Calibration (Intrinsics + Extrinsics)
 
@@ -198,7 +201,7 @@ Instead of selecting four points manually, the homography is computed from the c
 
 Required information:
 
-## Camera Intrinsics
+## 1- Camera Intrinsics
 
 Intrinsic parameters describe the camera itself.
 
@@ -220,7 +223,7 @@ These values come from camera calibration or camera specifications.
 
 ---
 
-## Camera Extrinsics
+## 2- Camera Extrinsics
 
 Extrinsic parameters describe where the camera is mounted.
 
@@ -246,7 +249,7 @@ Yaw = 0°
 
 ---
 
-## Ground Plane Assumption
+## 3- Ground Plane Assumption
 
 IPM assumes that everything being projected lies on
 
@@ -264,7 +267,7 @@ In addition, if the road itself is uphill or downhill, strange shapes occur beca
 
 ---
 
-## Homography Computation
+## 4- Homography Computation
 
 The calibration pipeline is:
 
