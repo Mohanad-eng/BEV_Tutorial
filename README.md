@@ -26,18 +26,17 @@ Perception View (PV) : what the robot's camera sees.
 
 Bird’s Eye View (BEV) : 2D View from above.
 
+## Example to understand the problem : 
+
 Imagine Rover Sees A box using the front camera, it dont know where it is it only knows the pixles, But i need to know where it is to know, distance betweeen me and the obstacle.
+so , 
 
-Notice that:
-
-Nearby objects look bigger.
-Distant objects look smaller.
-You only see what is in front of you.
-Everything is represented as pixels.
+1- Nearby objects look bigger.
+2- Distant objects look smaller.
+3- You only see what is in front of you.
+4- Everything is represented as pixels.
 
 So we use bev to see it from above as we see a map ,
-
-Notice something important:
 
 The Rover didn't move.
 
@@ -46,6 +45,10 @@ The Obstacle didn't move.
 Only the viewpoint changed.
 
 ![](https://multicorewareinc.com/wp-content/uploads/2023/06/BEV-gif.gif)
+
+As We see here the lanes in the road intersect at the end, but when we preform the bev it stays parallel all the Time 
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*n4TkjubzZX13-OocJLoykQ.png)
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -87,81 +90,7 @@ Only the viewpoint changed.
 
 4- Post-Processing and Refinement
 
-
-In plain English, what the script does, no code:
-
-# Inverse Perspective Mapping (IPM) / Bird's Eye View (BEV) Guide
-
-## Overview
-
-Inverse Perspective Mapping (IPM) is a computer vision technique that transforms a camera image into a **Bird's Eye View (BEV)**. Instead of viewing the road from the camera's perspective, the scene is projected onto the ground plane, making distances and lane boundaries easier to analyze.
-
-This technique is widely used in:
-
-* Autonomous vehicles
-* Mobile robots
-* Lane detection
-* Path planning
-* Autonomous navigation
-* Parking assistance
-
----
-
-# Why Do We Need IPM?
-
-A forward-facing camera suffers from **perspective distortion**.
-
-Objects farther away appear:
-
-* Smaller
-* Narrower
-* Closer together
-
-For example, two parallel lane lines appear to converge toward the horizon.
-
-Camera View:
-
-```text
-        Horizon
-           ▲
-
-      |        |
-       \      /
-        \    /
-         \  /
-          \/
-```
-
-After applying IPM:
-
-```text
-Bird's Eye View
-
-|          |
-|          |
-|          |
-|          |
-|          |
-```
-
-The lane boundaries become nearly parallel, making geometric measurements much easier.
-
----
-
-# Applications
-
-IPM is commonly used for:
-
-* Lane detection
-* Road segmentation
-* Obstacle mapping
-* Occupancy grids
-* Autonomous driving
-* Mobile robot navigation
-* Agricultural robots
-* Warehouse robots
-
----
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Two Ways to Perform IPM
 
