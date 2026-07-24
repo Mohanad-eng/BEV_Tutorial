@@ -92,11 +92,9 @@ As We see here the lanes in the road intersect at the end, but when we preform t
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Two Ways to Perform IPM
+# Two Ways to Perform IPM(Inverse Precpective mapping) : 
 
 There are two common approaches.
-
----
 
 ## Method 1 — Four-Point Homography
 
@@ -256,9 +254,13 @@ IPM assumes that everything being projected lies on
 Z = 0
 ```
 
-which represents the ground plane.
+Due to the premise that the height of all objects is 0— that is, the assumption that all objects are attached to the ground without height—information on the actual ground (roads, lane markings, grass, etc.) Perspective 
 
-Objects above the ground (cars, people, trees) cannot be perfectly projected.
+Distortionappears normal without being visible, but objects with height, such as cars, appear strange. In other words, they cannot be displayed normally because they violate the premise.
+
+In addition, if the road itself is uphill or downhill, strange shapes occur because it violates the assumption that the height of all objects is 0.
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAWIf0AE_yfOphLKdXW-fHoZJUjelPAYfrPFf0MQG1eX8UTXuQcc45tJOk&s=10)
 
 ---
 
@@ -307,19 +309,6 @@ The homography is computed mathematically without selecting any image points.
 * Requires camera calibration
 * Requires camera pose
 * More mathematical
-
----
-
-# Comparison
-
-| Feature                     | Four Points | Camera Calibration |
-| --------------------------- | ----------- | ------------------ |
-| Manual point selection      | Yes         | No                 |
-| Camera calibration required | No          | Yes                |
-| Robot friendly              | No          | Yes                |
-| Automatic                   | No          | Yes                |
-| Used in robotics            | Rarely      | Yes                |
-| Used for learning           | Yes         | Sometimes          |
 
 ---
 
