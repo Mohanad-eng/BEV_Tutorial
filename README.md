@@ -349,3 +349,8 @@ In Lidar we convert , In camera , In Radar
 
 ![](https://www.thinkautonomous.ai/blog/content/images/2023/12/image-12--1-.jpg)
 
+
+@ Copyrights MindCloud Robotics team,Faculty of Engineering ,Alexandria Universty,Egypt
+
+
+
