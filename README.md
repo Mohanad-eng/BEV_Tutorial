@@ -153,7 +153,7 @@ OpenCV uses the homography matrix to transform every pixel into the new top-down
 
 here is an Explanation for the Process how it is Done (Mathmatecially):
 
-![](ChatGPTImageSep2,2026,09_12_05PM.png)
+![](bev.png)
 
 ### Advantages
 
