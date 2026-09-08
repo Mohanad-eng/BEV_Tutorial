@@ -349,6 +349,39 @@ Use the **camera calibration method** if you are:
 
 Using **Rover Nexus** in the simulation **Webots** : 
 
+``cd mind_software``
+
+then go inside the src then inside the bev_pkg then bev_pkg again.
+
+``~/mind_software/src/bev_pkg/bev_pkg`` this is the path of the code we first run that is named **python3 ipm_code.py**
+
+then in another terminal run : 
+
+``ros2 launch bev_lane bev_lane_launch.py``
+
+then in another terminal run : 
+
+``ros2 launch bev_pkg sim_bev_launch.py``
+
+you will see this : 
+
+![](webots.png)
+
+and in another terminal to see the efffect of bev source the ws then :
+
+``rviz2``
+
+![](webots1.png)
+
+then choose the following topics from rviz2 : 
+
+![](webots2.png)
+
+then you will see the warped image and segmented also :
+
+![](webots3.png)
+
+**Note :** 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
